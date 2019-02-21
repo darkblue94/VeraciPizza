@@ -1,0 +1,151 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: auto;
+  background-color: #FFE534;
+}
+
+body #bg-image {
+  -webkit-clip-path: polygon(32% 26%, 1% 66%, 37% 86%, 93% 51%, 83% 15%, 50% 9%);
+          clip-path: polygon(32% 26%, 1% 66%, 37% 86%, 93% 51%, 83% 15%, 50% 9%);
+  background-color: #ffffff;
+}
+
+@media (min-width: 840px) {
+  body main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30%;
+        grid-template-columns: 30%;
+        grid-template-areas: "logo logo logo " ".  .  locations " ".  .  locations";
+  }
+}
+
+body main section#logo {
+  height: 300px;
+  width: 100%;
+  background-color: #FFE534;
+  display: block;
+  padding: 15px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+}
+
+@media (min-width: 840px) {
+  body main section#logo {
+    grid-area: logo;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    right: 300px;
+  }
+}
+
+body main section#logo img {
+  height: 300px;
+  width: 40%;
+  position: absolute;
+}
+
+body main section#locations {
+  background-color: #ffc734;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+@media (min-width: 840px) {
+  body main section#locations {
+    grid-area: locations;
+  }
+}
+
+body main section#locations a {
+  display: block;
+  border: #333333;
+  color: #333333;
+  font-size: 30px;
+  text-transform: uppercase;
+  background-color: #FFE534;
+  margin: 1em;
+}
+
+body main section#locations a:hover,
+body main section#locations a:active {
+  background-color: #ffffff;
+}
+
+body main#home {
+  background-color: #ffffff;
+}
+
+body main#home nav {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+body main#home nav img {
+  width: 20%;
+  height: 10%;
+  margin-right: 20%;
+}
+
+body main#home nav .drop {
+  background-color: #333333;
+  color: #FFE534;
+  width: 13%;
+  height: 30px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 50%;
+  display: inline-block;
+}
+
+@media (min-width: 840px) {
+  body main#home nav a {
+    margin: 0px;
+    color: #333333;
+  }
+}
+
+body main#home section#media_1 {
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+body main#home section#media_1 img {
+  width: 100%;
+  height: 300px;
+}
+
+body main#home section#content {
+  border-top: 4px dashed #FFE534;
+  border-bottom: 4px dashed #FFE534;
+  padding: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body main#home section#content h4 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body main#home section#content button {
+  background-color: #333333;
+  color: #FFE534;
+  width: 30%;
+  height: 30px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 70%;
+}
+/*# sourceMappingURL=index.css.map */

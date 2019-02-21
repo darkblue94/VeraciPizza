@@ -1,0 +1,200 @@
+$colors :(primary: #FFE534,
+primary-dark:#ffc734,
+accent:#333333,
+grey:#f0f0f0,
+w:#ffffff,
+
+
+);
+
+$padding:15px;
+$borders:15px;
+
+
+//creating a function to generate cleaner code.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content ;
+
+    }
+}
+
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    background-color: color(primary);
+
+
+    #bg-image {
+        clip-path: polygon(32% 26%, 1% 66%, 37% 86%, 93% 51%, 83% 15%, 50% 9%);
+        background-color: color(w);
+
+    }
+
+    main {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 30%;
+            grid-template-areas: "logo logo logo "
+                ".  .  locations "
+                ".  .  locations";
+        }
+
+
+
+        section#logo {
+            height: 300px;
+            width: 100%;
+            background-color: color(primary);
+            display: block;
+            padding: $padding;
+
+            align-content: center;
+            position: relative;
+
+            @include desktop {
+                grid-area: logo;
+
+                align-self: center;
+
+                order: 1;
+                right: 300px;
+
+
+            }
+
+            img {
+                height: 300px;
+                width: 40%;
+                position: absolute;
+
+
+            }
+        }
+
+
+
+        section#locations {
+            background-color: color(primary-dark);
+            height: 50%;
+            width: 100%;
+            text-align: center;
+            padding: $padding;
+
+            @include desktop {
+                grid-area: locations;
+
+
+
+            }
+
+
+            a {
+                display: block;
+                border: color(accent);
+                color: color(accent);
+                font-size: 30px;
+                text-transform: uppercase;
+                background-color: color(primary);
+                margin: 1em;
+
+            }
+
+            a:hover,
+            a:active {
+                background-color: color(w);
+
+
+            }
+
+        }
+    }
+
+    main#home{
+        background-color: color(w);
+
+    nav {
+        background-color: color(w);
+        width:100%;
+
+        img{
+            width:20%;
+            height:10%;
+            margin-right:20%;
+        }
+
+        .drop {
+            background-color: color(accent);
+            color:color(primary);
+            width:13%;
+            height:30px;
+            text-align: center;
+            border:none;
+            outline: none;
+            font-size:50%;
+   
+        
+            
+      
+        
+            display:inline-block;
+
+
+        }
+        @include desktop {
+            a {
+                margin: 0px;
+                color: color(accent);}
+        }
+    }
+
+    section#media_1{
+
+        background-color: color(w);
+        padding:$padding;
+     img{
+            width:100%;
+            height:300px;
+
+        }
+
+       
+    }
+     section#content {
+         border-top: 4px dashed color(primary);
+          border-bottom: 4px dashed color(primary);
+          padding:$padding;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+          h4{
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+          
+          button {
+              background-color: color(accent);
+              color: color(primary);
+              width: 30%;
+              height: 30px;
+              text-align: center;
+              border: none;
+              outline: none;
+              font-size: 70%;
+     }
+    
+
+
+    }
+
+}
+}
